@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
     <script src="./script.js" defer></script>
     <title>World of Codecraft</title>
 </head>
@@ -13,27 +16,55 @@
     <div id="gameBoard">
         <div class="playerBoard">
             <h2>Player One</h2>
-            <p>Name: <span id="player1_name"></span></p>
-            <div>Health: <span id="player1_health"></span></div>
+            <!-- <p>Name: <span id="player1_name"></span></p> -->
+            <form action="/process" method="post">
+                <label for="player1_name">Name:</label>
+                <input type="text" value="" placeholder="Enter name ..." id="player1_name">
+            </form>
+            <!-- Carlos to fix -->
+            <div class="health">Health: <span id="player1_health"></span></div>
             <div class="weaponList">
+                <h3>Shields:</h3>
+                <ul id ="player1_shields"></ul>
                 <h3>Weapons:</h3>
                 <ul id="player1_weapons"></ul>
-                <p>Weapon in use: <span id="player1_equipped"></span></p>
+                <p class="weapon_in_use">Weapon in use: <span id="player1_equipped"></span></p>
             </div>
             <button onclick="player_one.attack()">Attack!</button>
+            <button onclick="player_one.block()">Block</button>
         </div>
         <div class="playerBoard">
             <h2>Player Two</h2>
+            <form action="/process" method="post">
+                <label for="player2_name">Name:</label>
+                <input type="text" value="" placeholder="Enter name ..." id="player2_name">
+            </form>
+            <!-- Carlos to fix -->
             <img id="youDied" src="./images/youdied.gif"/>
             <div class="playerAttributes" id="kitBoard">
-                <p>Name: <spam id="player2_name"></spam></p>
-                <div>Health: <span id="player2_health"></span></div>
+                <!-- <p>Name: <span id="player2_name"></span></p> -->
+
+                <div class="health">Health: <span id="player2_health"></span></div>
                 <div class="weaponList">
                     <h3>Weapons:</h3>
                     <ul id="player2_weapons"></ul>
+                    <button onclick="player_two.attack()">Attack!</button>
                 </div>
             </div>
         </div>
+
     </div>
+    <div class="battleInterface">
+        <div class="wrap">
+            <div class="A">
+                <div class="A1" id="battleInterface">Battle Interface</div>
+            </div>
+            <div class="B">
+                <div class="B1" id="attackInfo">Attack Info</div>
+            </div>
+            <div class="turn_warning" id="turn_warning"></div>
+            <div class="turn" id="turn"></div>
+
+        </div>
 </body>
 </html>

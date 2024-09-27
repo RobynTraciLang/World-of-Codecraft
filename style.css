@@ -1,9 +1,9 @@
-/* * {
-    border: 1px solid red;
-} */
+* {
+    font-family: 'MedievalSharp', cursive;
+}
 
 html {
-    background-color: darkblue;
+    background-color: #121e26;
     color: aliceblue;
 }
 
@@ -13,6 +13,7 @@ html {
 
 h1 {
     text-align: center;
+    font-size: 80px;
 }
 
 .playerBoard {
@@ -21,7 +22,7 @@ h1 {
 }
 
 .weaponList {
-    border: 1px solid red;
+    border: 1px solid silver;
     margin: 20px;
     background-image: url('./images/sword2.png');
     background-size: cover;
@@ -35,4 +36,94 @@ ul {
 #youDied {
     width: 90%;
     display: none;
+}
+
+#player1_name{
+    background-color: darkblue;
+    color: red ;
+}
+#player2_name{
+    background-color: darkblue;
+    color: yellow;
+}
+
+/*Player Inventory*/
+
+.equip_buttons {
+    background-color: black;
+    font-size: 18px;
+    color: white;
+    padding: 2% 2%;
+    margin-left: 2%;
+}
+
+.equip_buttons:active {
+    background-color: white;
+    color: red;
+}
+
+.weapons_inventory{
+    margin: 2.5%;
+}
+
+.weapon_in_use {
+    font-size: 24px;
+}
+
+#player1_equipped {
+    font-size: 48px;
+    font-weight: bolder;
+    font-style: italic;
+    color: white;
+}
+
+.health {
+    margin-top: 5%;
+    font-size: 48px;
+    color: red;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    Height: 200px;
+    justify-content: space-between;
+    background-color: grey;
+}
+
+.A {
+    display: flex;
+    flex-direction: column;
+    flex: 1, 1, auto;
+}
+
+.B {
+    display: flex;
+    flex-direction: column;
+    flex: 0, 0, auto;
+}
+
+.A1 {
+    background-color: black;
+    flex: 0, 0, auto;
+    font-size: 20px;
+}
+
+.B1 {
+    background-image: url('./images/sword2.png');
+    background-size: cover;
+    flex: 0, 0, auto;
+    overflow: auto;
+    height: 200px;
+}
+
+.turn {
+    background-color: blueviolet;
+    flex: 0, 0, auto;
+}
+
+.turn_warning {
+    background-color: black;
+    flex: 0, 0, auto;
+    height: 100px;
 }
